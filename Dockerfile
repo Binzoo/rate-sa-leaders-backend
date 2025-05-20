@@ -11,7 +11,8 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y \
     curl \
     libjemalloc2 \
-    libvips && \
+    libvips \
+    libpq5 && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 ENV RAILS_ENV="production" \
