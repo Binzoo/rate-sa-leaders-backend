@@ -3,7 +3,7 @@ source "https://rubygems.org"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.2", ">= 7.2.2.1"
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 1.4"
+# gem "sqlite3", ">= 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -30,6 +30,7 @@ gem "bootsnap", require: false
 gem "rack-cors"
 gem 'jwt'
 gem 'bcrypt', '~> 3.1.7'
+gem 'pg'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -40,6 +41,10 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+end
+
+group :development, :test do
+  gem 'dotenv-rails'
 end
 
 
