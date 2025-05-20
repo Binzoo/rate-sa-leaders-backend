@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  position: MyString
+  party: MyString
+  region: MyString
+  about: MyString
+  image_url: MyString
+  upvotes: 1
+  downvotes: 1
+  total_votes: 1
+  slug: MyString
+
+two:
+  full_name: MyString
+  position: MyString
+  party: MyString
+  region: MyString
+  about: MyString
+  image_url: MyString
+  upvotes: 1
+  downvotes: 1
+  total_votes: 1
+  slug: MyString
