@@ -12,7 +12,7 @@ module Web
               q: "%#{q}%"
             )
           else
-            @politicians = Politician.all
+            @politicians = Politician.order(full_name: :asc)
           end
 
           render json: @politicians, status: :ok 
