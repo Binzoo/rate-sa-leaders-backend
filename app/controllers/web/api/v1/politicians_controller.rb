@@ -38,6 +38,7 @@ module Web
           vote = Vote.find_by(politician_id: @politician.id, ip_address: ip)
           if vote
             if vote.vote_type == "down"
+              @politician.upvotes = @politician.upvotes - 1
               vote.vote_type = "up"
               vote.save!
               render json: { message: "You have already voted, we are chaning your vote from Unlike to Like."}, status: :ok
@@ -62,6 +63,7 @@ module Web
             vote = Vote.find_by(politician_id: @politician.id, ip_address: ip)
             if vote
               if vote.vote_type == "up"
+                @politician.downvotes = @politician.downvotes - 1
                 vote.vote_type = "down"
                 vote.save!
                 render json: { message: "You have already voted, we are chaning your vote from Like to UnLike."}, status: :ok

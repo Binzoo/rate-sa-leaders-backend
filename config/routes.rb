@@ -13,6 +13,7 @@ Rails.application.routes.draw do
            
           end
         end
+        resources :events, only: [:index, :show],  param: :slug
       end    
     end  
   end
